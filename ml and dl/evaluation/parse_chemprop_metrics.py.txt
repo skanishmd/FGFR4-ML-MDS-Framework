@@ -1,0 +1,48 @@
+import pandas as pd
+import os
+import sys
+
+# Arguments
+log_dir = sys.argv[1]  # e.g., logs/run_classification_2025-10-05_15-02-21
+output_csv = sys.argv[2]  # e.g., logs/run_summary_metrics.csv
+
+summary = []
+
+# ---------- Classification Metrics ----------
+classification_metrics_path = os.path.join(log_dir, "training_metrics_classification.csv")
+classification_pred_path = os.path.join(log_dir, "predictions_classification.csv")
+
+if os.path.exists(classification_metrics_path):
+    df_clf = pd.read_csv(classification_metrics_path)
+    best_epoch = df_clf['roc'].idxmax()
+    row = df_clf.iloc[best_epoch]
+    summary.append({
+        "Task": "Classification",
+        "Accuracy": row.get("accuracy", None),
+        "F1": row.get("f1", None),
+        "ROC-AUC": row.get("roc", None),
+        "PRC-AUC": row.get("prc", None),
+        "Notes": "Pretrain only"
+    })
+
+# ---------- Regression Metrics ----------
+regression_metrics_path = os.path.join(log_dir, "training_metrics_regression.csv")
+regression_pred_path = os.path.join(log_dir, "predictions_regression.csv")
+
+if os.path.exists(regression_metrics_path):
+    df_reg = pd.read_csv(regression_metrics_path)
+    best_epoch = df_reg['r2'].idxmax()
+    row = df_reg.iloc[best_epoch]
+    summary.append({
+        "Task": "Regression",
+        "MSE": row.get("mse", None),
+        "RMSE": row.get("rmse", None),
+        "R2": row.get("r2", None),
+        "Notes": "Pretrain only"
+    })
+
+# Save combined summary
+df_summary = pd.DataFrame(summary)
+df_summary.to_csv(output_csv, index=False)
+print(f"✅ Metrics summary saved to {output_csv}")
+print(df_summary)

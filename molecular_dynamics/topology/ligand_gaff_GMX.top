@@ -1,0 +1,20 @@
+; ligand_gaff_GMX.top created by acpype (v: 2023.10.27) on Thu Mar 19 07:55:00 2026
+
+[ defaults ]
+; nbfunc        comb-rule       gen-pairs       fudgeLJ fudgeQQ
+1               2               yes             0.5     0.8333333333
+
+; Include ligand_gaff_GMX.itp topology
+#include "ligand_gaff_GMX.itp"
+
+; Ligand position restraints
+#ifdef POSRES_LIG
+#include "posre_ligand_gaff.itp"
+#endif
+
+[ system ]
+ ligand_gaff
+
+[ molecules ]
+; Compound        nmols
+ ligand_gaff      1     
