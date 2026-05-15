@@ -6,7 +6,7 @@
 
 ## Overview
 
-This repository contains the complete computational workflow, datasets, trained models, molecular docking analyses, molecular dynamics simulations, and MM-GBSA calculations associated with our study:
+This repository contains the computational workflow, datasets, molecular docking analyses, molecular dynamics simulations, and MM-GBSA calculations associated with our study:
 
 > **“A Novel Integrated ML-MDS Framework for the Discovery of FGFR4 Inhibitors for Hepatocellular Carcinoma”** 
 
@@ -60,46 +60,79 @@ Based on the manuscript highlights.
 ```text
 FGFR4-Discovery/
 │
-├── data/
-│   ├── raw/
-│   ├── curated/
-│   ├── descriptors/
-│   └── fingerprints/
+├── admet/
+│   ├── processed_tables/
+│   └── raw_results/
 │
-├── machine_learning/
-│   ├── random_forest/
-│   ├── xgboost/
-│   ├── chemprop/
-│   └── transfer_learning/
+│
+├── data/
+│   ├── processed/
+│   ├── raw/
+│   └── structures/
+│
 │
 ├── docking/
-│   ├── receptor/
-│   ├── ligands/
-│   ├── vina_configs/
 │   ├── docking_results/
-│   └── interaction_maps/
+│   ├── ligands/
+│   ├── original_ligand/
+│   ├── pre_docking/
+│   ├── receptor/
+│   ├── reference_ligands/
+│   └── vina_configs/
 │
-├── molecular_dynamics/
-│   ├── topology/
-│   ├── mdp_files/
-│   ├── trajectories/
-│   ├── analysis/
-│   └── figures/
 │
-├── mmgbsa/
-│   ├── decomposition/
-│   ├── energy_tables/
-│   └── scripts/
+├── highlights/
 │
-├── admet/
+│
+├── manuscript/
+│
 │
 ├── figures/
+│   ├── chemical_space/
+│   ├── docking/
+│   │   ├── interaction_maps/
+│   │   └── validation/
+│   │ 
+│   ├── graphical_abstract/
+│   ├── ml and dl/
+│   ├── mm_gbsa/
+│   └── molecular_dynamics/
+│
+│
+├── ml and dl/
+│   ├── configs/
+│   ├── datasets/
+│   ├── evaluation/
+│   ├── pre_processing/
+│   ├── predictions/
+│   ├── results/
+│   └── scripts/
+│
+│
+├── mm-gbsa/
+│   ├── configuration/
+│   └── decomposition/
+│
+│
+├── molecular_dynamics/
+│   ├── analysis/
+│   ├── mdp_files/
+│   ├── topology/
+│   └── trajectories/
+│
 │
 ├── supplementary_information/
+│   └── raw/
+│
+│
+├── tables/
+│
 │
 ├── environment/
-│   ├── requirements.txt
-│   └── environment.yml
+│
+│
+├── LICENSE
+│
 │
 └── README.md
 ```
@@ -311,44 +344,60 @@ The shortlisted compounds demonstrated:
 
 # Software and Tools
 
-## Cheminformatics & Machine Learning
+## Programming & Scripting
 
 * Python ≥ 3.9
-* RDKit
+* R
+* Shell Scripting
+
+## Machine Learning & Deep Learning
+
 * Scikit-learn
 * XGBoost
 * Chemprop
+* PyTorch
+* TensorFlow / Keras
+
+## Cheminformatics & Molecular Data Processing
+
+* RDKit
 * Pandas
 * NumPy
-* Matplotlib
 
-## Molecular Modeling
+## Molecular Modeling & Simulation
 
 * AutoDock Vina
 * PyRx
 * GROMACS 2023.3
 * gmx_MMPBSA
 
-## Visualization
+## Visualization & Structural Analysis
 
 * PyMOL
 * BIOVIA Discovery Studio Visualizer
+* Matplotlib
+* Seaborn
+* ggplot2
+* dplyr
+* tidyr
+* caret
 
----
+## Development Environment & Reproducibility
 
-# Reproducibility
+* Jupyter Notebook
+* RStudio
+* Google Colab
+* Git
+* Git LFS
+* Miniconda
+* Windows 11
+* macOS
 
-To ensure reproducibility:
+## Hardware Acceleration
 
-* Scaffold-based splitting was applied
-* Preprocessing performed only on training folds
-* Random seeds fixed where applicable
-* Docking configurations provided
-* MD parameter files included
-* Full workflows modularized for stepwise execution
-
-This repository follows the reproducibility recommendations proposed by the *Journal of Chemical Information and Modeling (JCIM)* regarding data and methodological transparency. 
-
+* NVIDIA CUDA
+* GPU-accelerated Deep Learning
+  
 ---
 
 # Citation
@@ -360,7 +409,7 @@ If you use this repository, please cite:
   title={A Novel Integrated ML-MDS Framework for the Discovery of FGFR4 Inhibitors for Hepatocellular Carcinoma},
   author={Md, Sk Anish and Ghosh, Megha and Deb, Sayan and Pati, Soumen Kumar and Mandal, Manab},
   journal={Under Review},
-  year={2025}
+  year={2026}
 }
 ```
 
