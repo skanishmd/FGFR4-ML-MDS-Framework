@@ -60,6 +60,7 @@ Based on the manuscript highlights.
 ```text
 FGFR4-Discovery/
 │
+│
 ├── admet/
 │   ├── processed_tables/
 │   └── raw_results/
