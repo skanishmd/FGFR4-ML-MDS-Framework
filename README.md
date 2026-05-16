@@ -345,7 +345,7 @@ The shortlisted compounds demonstrated:
 
 ## Programming & Scripting
 
-* Python ≥ 3.9
+* Python
 * R
 * Shell Scripting
 
@@ -355,7 +355,6 @@ The shortlisted compounds demonstrated:
 * XGBoost
 * Chemprop
 * PyTorch
-* TensorFlow / Keras
 
 ## Cheminformatics & Molecular Data Processing
 
@@ -375,27 +374,17 @@ The shortlisted compounds demonstrated:
 * PyMOL
 * BIOVIA Discovery Studio Visualizer
 * Matplotlib
-* Seaborn
-* ggplot2
-* dplyr
-* tidyr
-* caret
 
 ## Development Environment & Reproducibility
 
-* Jupyter Notebook
-* RStudio
 * Google Colab
 * Git
 * Git LFS
-* Miniconda
 * Windows 11
-* macOS
 
 ## Hardware Acceleration
 
 * NVIDIA CUDA
-* GPU-accelerated Deep Learning
   
 ---
 
