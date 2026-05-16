@@ -51,8 +51,6 @@ This work presents a multi-stage AI-assisted computational framework for the dis
 * MM-GBSA hotspot decomposition identifying VAL51 and LEU189 as dominant stabilizing residues
 * Ligand_66 identified as the top computational lead compound
 
-Based on the manuscript highlights. 
-
 ---
 
 # Repository Structure
