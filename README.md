@@ -56,7 +56,7 @@ This work presents a multi-stage AI-assisted computational framework for the dis
 # Repository Structure
 
 ```text
-FGFR4-Discovery/
+FGFR4-ML-MDS-Framework/
 │
 │
 ├── admet/
