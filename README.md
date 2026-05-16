@@ -82,12 +82,6 @@ FGFR4-Discovery/
 │   └── vina_configs/
 │
 │
-├── highlights/
-│
-│
-├── manuscript/
-│
-│
 ├── figures/
 │   ├── chemical_space/
 │   ├── docking/
@@ -98,6 +92,12 @@ FGFR4-Discovery/
 │   ├── ml and dl/
 │   ├── mm_gbsa/
 │   └── molecular_dynamics/
+│
+│ 
+├── highlights/
+│
+│
+├── manuscript/
 │
 │
 ├── ml and dl/
@@ -129,7 +129,7 @@ FGFR4-Discovery/
 ├── tables/
 │
 │
-├── environment/
+├── .gitattributes
 │
 │
 ├── LICENSE
