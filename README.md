@@ -6,11 +6,11 @@
 
 ## Overview
 
-This repository contains the computational workflow, datasets, molecular docking analyses, molecular dynamics simulations, and MM-GBSA calculations associated with our study:
+Our study:
 
 > **“A Novel Integrated ML-MDS Framework for the Discovery of FGFR4 Inhibitors for Hepatocellular Carcinoma”** 
 
-The framework combines:
+The study combines:
 
 * Classical machine learning (RF, XGBoost)
 * Transfer learning-based graph neural networks (Chemprop D-MPNN)
