@@ -10,7 +10,7 @@ Our study:
 
 > **“A Novel Integrated ML-MDS Framework for the Discovery of FGFR4 Inhibitors for Hepatocellular Carcinoma”** 
 
-The study combines:
+It combines:
 
 * Classical machine learning (RF, XGBoost)
 * Transfer learning-based graph neural networks (Chemprop D-MPNN)
